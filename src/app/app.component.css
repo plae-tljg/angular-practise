@@ -1,0 +1,15 @@
+.main-content {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: stretch; */
+  }
+  
+
+section {
+    padding: 20px;
+    width: 80dvw;
+    /* display: table-cell; */
+}
+
+  
+  

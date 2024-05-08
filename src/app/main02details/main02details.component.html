@@ -1,0 +1,17 @@
+<button type="button" (click)="goBack()" >go back</button>
+
+<div style="padding-top: 10vh; padding-left:5vw">
+    <div style="border: 2px solid black; padding: 10px;">
+        <h1 style="font-size: 28px; font-weight: bold;">{{commodity[0].name}}</h1>
+        <p style="font-size: 18px; font-weight: bold; color: red;" >{{commodity[0].code}}</p>
+        <p style="font-size: 18px; font-weight: bold;" >${{commodity[0].price.value}}</p>
+        <p style="font-size: 18px; font-weight: bold;" > Stock Level Status: {{commodity[0].stock.stockLevelStatus.code}}</p>
+        <p [innerHTML]="commodity[0].summary"></p>
+        <p [innerHTML]="commodity[0].description"></p>
+        <img [src]="commodity[1]" alt="image" class="photo" style="margin:auto; align-items: center; justify-content: center; display:flex;" >
+      </div>
+      
+
+</div>
+
+

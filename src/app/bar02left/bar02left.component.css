@@ -1,0 +1,75 @@
+aside {
+  width: 20vh;
+  background-color: #ccc;
+  padding: 20px;
+  min-height: 100dvh;
+  overflow: auto;
+  max-height: 120dvh;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Add some styles to the table cells */
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+
+/* Add some styles to the table cell images */
+td img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+}
+
+/* Add some styles to the table rows */
+tr td:first-child {
+  border-right: none;
+}
+
+/* Add a border to the bottom of each row */
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Remove top border from first row */
+tr:first-child td {
+  border-top: none;
+}
+
+/* Remove bottom border from last row */
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Add alternating background color to rows */
+tr:nth-child(odd) td {
+  background-color: #f2f2f2;
+}
+
+/* Add some styles to the table cell text */
+h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  font-size: 14px;
+}
+
+/* Add some space between rows */
+.spacer-row {
+  height: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+}

@@ -1,0 +1,28 @@
+<mat-paginator [length]="fetchedData.length" 
+             [pageSize]="pageSize" 
+             (page)="onPageChange($event)"> 
+</mat-paginator> 
+<div class="product-grid">
+    <div class="product-item" *ngFor="let item of fetchedData | paginate: pageIndex: pageSize"> 
+        <div class="grid-item">
+            <a routerLink="/product/detail/{{item[2]}}" class="product-info" style="padding-bottom: 1rem; height:1dvh; align-items: center; border: 1px solid #ccc;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            ">
+                {{item[0].name}}<br><br>
+            </a>
+            <mat-checkbox class="button-checkbox" type="checkbox"
+                [checked]="cart && cart.indexOf(item[2]) !== -1"
+                (change)="onProductSelect($event, item[2])">
+            </mat-checkbox></div>
+        
+            <div style="flex:block; justify-content: center; align-items: center; display:flex; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); height:40dvh; width:40dvh; margin:auto; margin-bottom: 5dvh;
+            ">
+                <img [src]="item[1]" alt="image" class="photo" >
+            </div>
+
+            <button (click)="toggleActive(item[2])">View Details</button>
+            <div *ngIf=item[3] class="bubble">
+                <h3>Item Details:</h3>
+                <div [innerHTML]="item[0].summary"></div>
+            </div>
+        </div>
+</div>

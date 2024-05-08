@@ -1,0 +1,19 @@
+<!-- Design: as a side panel for navigation can click a button to change to shopping cart -->
+
+<aside>
+    <table>
+        <button (click)="deselect()"> Remove all</button>
+        <div *ngFor="let item of cart">
+        <tr>
+          <td style="height: 100%;">
+            <img [src]="fetchedData[item-1][1]" alt="{{item}}" />
+          </td>
+          <td>
+            <a href="/product/detail/{{item}}"><h3>{{fetchedData[item-1][0].name}}</h3></a>
+          </td>
+        </tr>
+        <tr class="spacer-row"></tr>
+        </div>
+    </table>
+</aside>
+                        
